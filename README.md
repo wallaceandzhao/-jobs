@@ -1,0 +1,2 @@
+# learning-myself
+a freshman
