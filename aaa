@@ -38,8 +38,25 @@ begin
         cnt <= 4'b0;
         clk_out <= 1'b0;
     end
-    
-    `timescale 1ns / 1ps
+    else
+    begin
+        if(cnt == N/2-1)
+        begin
+            clk_out <= ~clk_out;
+            cnt <= 4'b0;
+        end
+        else
+        begin
+            cnt <= cnt + 4'b1;
+        end
+    end
+end
+ 
+endmodule
+
+
+//test
+  `timescale 1ns / 1ps
 
 ////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -98,21 +115,4 @@ module test;
 
 	end
       
-endmodule
-
-
-    else
-    begin
-        if(cnt == N/2-1)
-        begin
-            clk_out <= ~clk_out;
-            cnt <= 4'b0;
-        end
-        else
-        begin
-            cnt <= cnt + 4'b1;
-        end
-    end
-end
- 
 endmodule
