@@ -1,2 +1,1 @@
-# learning-myself
-a freshman
+# 垃圾的作业
