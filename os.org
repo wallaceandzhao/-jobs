@@ -1,0 +1,20 @@
+操作系统遍历子进程
+list_head是一个双向循环链表,成员只有指向下一个和上一个list_head节点的指针.找到上一个或者下一个list_head成员
+有两个list_head类型的结构体children和sibling.cp的子进程实际上是一个list_head的链表.
+如何遍历子进程?
+访问该进程的子进程,获得第一个子进程的task_struct,然后此时作为父进程的children指针为list_head结构体,其next指针指向的是sibling成员
+父-children->第一个子进程-next->第一个子进程的兄弟进程的sibling结构体
+模拟shell : fork() https://www.cnblogs.com/dongguolei/p/8086346.html
+execl() http://www.cnblogs.com/mickole/p/3187409.html
+wait(0) https://blog.csdn.net/hellojoy/article/details/77337748
+管道通信:  https://blog.csdn.net/bit_clearoff/article/details/55105816
+lockf()http://www.cnblogs.com/charlesblc/p/6287631.html
+write()https://blog.csdn.net/hhhlizhao/article/details/71552588
+消息队列: msgbuf http://www.cnblogs.com/kunhu/p/3608589.html
+sem_t http://blog.chinaunix.net/uid-26497520-id-3799690.html
+msgrcv/msgsnd https://baike.baidu.com/item/msgsnd/msgrcv
+pthread_t用于声明线程ID。
+pthread_create pthread_join https://www.cnblogs.com/amanlikethis/p/5537175.html
+信号量机制见课本
+共享内存: getshmid本质shmget函数 https://blog.csdn.net/skyroben/article/details/72625028?utm_source=blogxgwz5
+sem_open和sem_init的区别?https://blog.csdn.net/maopig/article/details/52227768
