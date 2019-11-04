@@ -27,3 +27,14 @@ pthread_create pthread_join https://www.cnblogs.com/amanlikethis/p/5537175.html
 共享内存: getshmid本质shmget函数 https://blog.csdn.net/skyroben/article/details/72625028?utm_source=blogxgwz5
 
 sem_open和sem_init的区别?https://blog.csdn.net/maopig/article/details/52227768
+User
+Rotation: 看所有rotation的shift安排情况，添加shift
+创建标准Rotation：
+    命名，选择三种类型
+    创建shift，命名，换班日期
+    给shift添加人员（轮换时按添加人员顺序）
+创建全日制Rotation：
+    与标准相比：多个shifts每个shift一个user
+    从星期A到星期B每天的x到y
+创建custom Rotation：
+    从星期A的x到星期b的y
